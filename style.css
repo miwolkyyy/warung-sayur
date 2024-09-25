@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100vw;
+}
+
+.columb {
+  background: rgb(195, 195, 195);
+  background: -moz-linear-gradient(0deg, rgba(195, 195, 195, 1) 0%, rgba(255, 255, 255, 1) 78%);
+  background: -webkit-linear-gradient(0deg, rgba(195, 195, 195, 1) 0%, rgba(255, 255, 255, 1) 78%);
+  background: linear-gradient(0deg, rgba(195, 195, 195, 1) 0%, rgba(255, 255, 255, 1) 78%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c3c3c3",endColorstr="#ffffff",GradientType=1);
+}
+
+.plus,
+.minus {
+  width: 1.5rem;
+  border-radius: 10%;
+  border: 1px solid black;
+  background-color: transparent;
+  text-align: center;
+}
+
+.plus:active,
+.minus:active {
+  background-color: black;
+  color: white;
+}
+
+/* .outy {
+  border-image: linear-gradient(to left, #ac110e 0%, #cbcb0b 100%) 1;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+} */
+
+/* scroll */
+
+body {
+  --sb-track-color: #000000;
+  --sb-thumb-color: #000000;
+  --sb-size: 2px;
+}
+
+*::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
